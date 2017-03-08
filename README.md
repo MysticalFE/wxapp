@@ -1,2 +1,14 @@
-#wxapp-iluxday
-###基于爱奢汇webapp做的小程序版，目前还不完善，后续会跟进
+###UI基于我们电商平台的wap端开发的小程序（尚在开发中），现阶段的页面框架如下:
+>Pages
+>>home
+>>myCenter
+>>order
+>>prodetail
+>>register
+>>search
+>>searchResult
+>>classify
+>>login_success
+>>cart
+>>address
+>>addAddress
