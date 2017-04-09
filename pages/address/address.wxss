@@ -1,0 +1,21 @@
+/* pages/address/address.wxss */
+.add-address-button{
+    height: 44px;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+    width: 94%;
+    padding: 0 10px;
+    z-index: 13;
+}
+.add-address-button text{
+    width: 100%;
+    background: #947A41;
+    color: #fff;
+    display: block;
+    border-radius: 3px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 16px;
+}

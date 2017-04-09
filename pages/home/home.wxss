@@ -1,0 +1,133 @@
+page{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.clearfix:after{
+	content:'';
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.contentWrap{
+    height:100%;
+}
+.searchBox{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 999;
+    display: flex;
+    display: -webkit-flex;
+    width:100%;
+    height:60rpx;
+    background-color: rgba(34,34,34,0.8);
+    padding:5px 5px;
+    justify-content: center;
+    align-items: center;
+}
+.searchInput{
+    width:85%;
+    height:30px;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+}
+.searchInput icon{
+    display: inline-block;
+    vertical-align: top;
+    margin-top:6px;
+    margin-left:3px;
+}
+.searchInput input{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 30px;
+    text-indent: 4px;
+    height:30px;
+}
+.slide-img{
+    width:100%;
+    height:100%;
+    animation: fadeIn 1.8s;
+}
+.slide-wrap{
+    width:100%;
+    height:300rpx;
+    margin-top: 80rpx;
+}
+.imgIcon{
+    display: inline-flex;
+    flex-direction: column;
+    background: #f8f8f8;
+    height: auto;
+    padding: 11px 0;
+    width: 25%;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+.imgIcon image{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 6px auto;
+}
+.scrollList{
+    height:100%;
+}
+.shoppingList{
+    width:100%;
+    height:100%;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction:column;
+    -webkit-flex:1;
+    flex: 1;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap:wrap;
+    flex-wrap:wrap;
+}
+.shoppingImg{
+    width:328rpx;
+    height:328rpx;
+}
+.shoppingList .shoppingItem{
+    display: inline-block;
+    background-color:#f8f8f8;
+    width:43%;
+    height:100%;
+    padding:26rpx;
+    animation: fadeIn 1.8s;
+}
+.shoppingItem text{
+    display: block;
+}
+.shoppingDesc{
+    color: rgba(34,34,34,0.80);
+    font-size: 14px;
+    height: 32px;
+    line-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.shoppingPrice{
+    color:#f15353;
+    font-size: 16px;
+    padding-right: 10px;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: text-bottom;
+    display: inline-block;
+    margin-top: 1px;
+}
+.btn-load-more{
+    width:100%;
+    height:60rpx;
+    color:#666;
+    line-height: 60rpx;
+    text-align: center;
+    border-top: 1px #f8f8f8 solid;
+}

@@ -1,0 +1,36 @@
+.userID,.password{
+    width: 90%;
+    height: 44px;
+    line-height: normal;
+    padding: 0;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    background: #fff;
+    font-size: 16px;
+    color: #252525;
+    -webkit-appearance: none;
+    padding-left: 15px;
+    margin:10px auto;
+}
+.login-button{
+    margin-bottom:10px;
+    display:inline-block;
+    width:50%;
+}
+.user-avatar{
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 100%;
+    box-shadow: 0 0 300rpx 100rpx rgba(255, 255, 255, .2), 0 1px 0 rgba(255, 255, 255, 0.4);
+    vertical-align: center;
+}
+.user-info {
+    box-sizing: border-box;
+    width: 750rpx;
+    height: 400rpx;
+    padding: 30rpx 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}

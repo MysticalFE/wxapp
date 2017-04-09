@@ -1,0 +1,5 @@
+<view class="add-address-button">
+    <navigator url="../addAddress/addAddress">
+        <text>新增收货地址</text>
+    </navigator>
+</view>

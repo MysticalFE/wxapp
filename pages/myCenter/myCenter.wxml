@@ -1,0 +1,22 @@
+<!--<block wx:if="{{userInfo == null}}">-->
+    <view class="login">
+        <form class="login-form" bindsubmit="login">
+            <input class="userID" type="text" placeholder="请输入用户名" data-name="{{userName}}" name="userName"/>
+            <input class="password" password="true"  placeholder="请输入密码" data-password="{{userPassword}}" name="userPassword"/>
+            <button class="login-button" hover-class="none" form-type="submit">登录</button>
+        </form>
+        <navigator url="../register/register" hover-class="none">
+            <button class="login-button" hover-class="none" form-type="submit">快速注册</button>
+        </navigator>
+        <button class="exit-login-button login-button" hover-class="none" form-type="reset" bindtap="bindExitLogin">退出登录</button>
+    </view>
+<!--</block>-->
+<!--<block wx:elif="{{userInfo != null}}">
+    <view class="user-info">
+        <image src="{{userInfo.avatarUrl}}" class="user-avatar"></image>
+        <view class="user-nickname">
+            {{userInfo.nickName}}
+        </view>
+    </view>
+    
+</block>-->

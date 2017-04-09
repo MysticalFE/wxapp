@@ -1,0 +1,44 @@
+
+<view class="contentWrap">
+<!--搜索框-->
+    <view class="searchBox">
+        <view class="searchInput">
+            <icon type="search" size="20"></icon>
+            <input placeholder="我是小程序" focus="{{focus}}" maxlength="-1" bindfocus="viewSearch"/>
+        </view>
+        <view bindtap="bindLogin">登录</view>
+    </view>
+<!--benner-->
+    <view class="slide-wrap">
+        <swiper indicator-dots="{{isDotIndicator}}" autoplay="{{autoplay}}" current="{{currentIndex}}" interval="{{interval}}" circular="{{circular}}">
+            <block wx:for="{{imgUrls}}" wx:key="banner">
+                <swiper-item>
+                    <image src="{{item}}" class="slide-img" mode="aspectFill"></image>
+                </swiper-item>
+            </block>   
+        </swiper>
+    </view>
+    
+<!--中间4个入口-->
+    <view class="imgIcon" wx:for="{{imgDesc}}" wx:key="imgId">
+            <image src="{{item.imgUrl}}" mode="aspectFill"></image>
+            <text>{{item.iconDesc}}</text>
+    </view>
+<!--商品列表-->
+    <view class="scrollList">
+        <scroll-view class="shoppingList" scroll-y="true">
+            <block wx:for="{{shoppingListItems}}" wx:key="shppping-list">
+                <view class="shoppingItem">
+                    <navigator url="../prodetail/prodetail?productID={{item.ProductID}}"  hover-class="none">
+                        <image src="{{item.ImageUrl}}" class="shoppingImg" mode="aspectFill"></image>
+                        <text class="shoppingDesc">{{item.ProductName}}</text>
+                        <text class="shoppingPrice">￥{{item.Price}}</text>
+                    </navigator>
+                </view>
+            </block>
+        </scroll-view>
+        <view class="btn-load-more" bindtap="loadMore">
+            {{tipText}}
+        </view>
+    </view>
+</view>

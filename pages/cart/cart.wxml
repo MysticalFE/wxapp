@@ -1,0 +1,39 @@
+<!--pages/cart/cart.wxml-->
+<view class="container carts-list">
+    <block wx:for="{{cartProductList}}" wx:key="index">
+        <!--<block wx:if="{{item.CrossBorder == 0}}">-->
+            <view class="carts-item" data-index="{{index}}">
+                <icon type="{{item.IsCheck == 1 ? 'success_circle' : 'circle'}}" size="20" catchtap="bindCheckbox" data-index="{{index}}"/>
+                <view>
+                    <image class="carts-image" src="{{item.ImageUrl}}" mode="aspectFill"></image>
+                </view>
+                <view class="carts-text">
+                    <text class="carts-title">{{item.ProductName}}</text>
+                    <view class="carts-subtitle">
+                        <text class="carts-price">{{item.Price}}</text>
+                        <view>
+                            <view class="stepper">
+                                <!-- 减号 -->
+                                <text bindtap="bindMinus" data-index="{{index}}">-</text>
+                                <!-- 数值 -->
+                                <text class="stepper-num"  data-index="{{index}}">{{item.Num}}</text>
+                                <!-- 加号 -->
+                                <text bindtap="bindPlus"  data-index="{{index}}">+</text>
+                            </view>
+                        </view>
+                        <text class="delete" bindtap="bindDelectOne"   data-index="{{index}}">删除</text>
+                    </view>
+                </view>
+            </view>
+        <!--</block>-->
+    </block>
+</view>
+<view class="carts-footer">
+	<view class="select-and-amount" bindtap="bindSelectAll">
+		<icon type="{{selectedAllStatus ? 'success_circle' : 'circle'}}" size="18"/>
+		<text>全选</text>
+		<text>{{total}}</text>
+	</view>
+	 <!--<view class="delete" bindtap="deleteAll">删除</view> -->
+	<view class="button" bindtap="bindCheckout">立即结算</view>
+</view>

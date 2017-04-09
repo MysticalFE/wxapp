@@ -1,0 +1,33 @@
+/* pages/addAddress/addAddress.wxss */
+.item{
+    margin-bottom: 10px;
+    margin-top:15px;
+    /*position: relative;*/
+    width: 86%;
+    padding:0 10px;
+}
+.item input,.item .area-select{
+    display:block;
+    width: 100%;
+    height: 44px;
+    line-height: normal;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    background: #fff;
+    font-family: '\5fae\8f6f\96c5\9ed1';
+    font-size: 16px;
+    color: #252525;
+    -webkit-appearance: none;
+    padding:0 15px;
+}
+.save{
+    width: 94%;
+    background: #947A41;
+    color: #fff;
+    display: block;
+    border-radius: 3px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 16px;
+}

@@ -1,0 +1,40 @@
+<view>
+    <swiper indicator-dots="{{isDotIndicator}}" autoplay="{{autoplay}}" current="{{currentIndex}}" interval="{{interval}}" circular="{{circular}}" class="prodetailBanner">
+        <block wx:for="{{prodetailBannerList}}" wx:key="prodetailBanner">
+            <swiper-item class="bannerItem">
+                <image src="{{item.mediumImageSrc}}" class="bannerImg" mode="aspectFill"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<view class="productDesc">
+    <text>{{productName}}</text>
+    <text>￥{{productPrice}}</text>
+</view>
+
+<view class="select-Count">
+    <view class="selectedCount-1">
+        <text>已选  </text>
+        <text  class="selectedCount-1_1">{{changeSelectCount}}</text>
+        <text>件</text>
+    </view>
+    <view class="buyCount">
+        <text class="buyCountText">购买数量</text>
+        <view class="stepper">
+            <text bindtap="bindMinus" class="munis">-</text>
+            <input type="number" value="{{changeSelectCount}}" maxlength="4" bindinput="inputCount" placeholder="1"/>
+            <text bindtap="bindPlus"  class="munis">+</text>
+    </view>
+    </view>
+    
+</view>
+
+<view class="prodetailBottom">
+    <view class="cartIcon" bindtap="jumpCartPage">
+        <view class="cartIconTop">{{cartCount}}</view>
+        <view class="cartIconButtom">购物车</view>
+    </view>
+    <!--<view class="cartButton buyButton">立即购买</view>-->
+    <view class="cartButton" bindtap="onJoinCart">加入购物车</view>
+</view>

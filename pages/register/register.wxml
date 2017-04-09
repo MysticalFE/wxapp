@@ -1,0 +1,13 @@
+<view class="registerPage">
+    <form bindsubmit="getValidateCode">
+        <!--<view class="mobileNumber">-->
+            <input class="mobileNum" placeholder="请输入手机号" maxlength="11" name="mobileNum"/>
+            <button class="mobileNumSubmit" form-type="submit">{{msgvalidateText}}</button>
+        <!--</view>-->
+    </form>
+    <form>
+        <input class="mobileCheckMsg" placeholder="请输入短信验证码" name="validateCode"/>
+        <input class="registerPassword mobileCheckMsg" placeholder="请设置6-20位登录密码" name="registerPassword" password="true"/>
+        <button class="registerButton" form-type="submit">注册</button>
+    </form>
+</view>

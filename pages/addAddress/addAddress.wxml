@@ -1,0 +1,37 @@
+<!--pages/addAddress/addAddress.wxml-->
+<form bindsubmit="formSubmit">
+    <view class="item">
+        <input name="realname" placeholder="收件人姓名" value=""/>
+    </view>
+    <view class="item">
+        <input name="mobile" placeholder="手机号码" value="" maxlength="11"/>
+    </view>  
+    <view class="item">
+        <input name=""/>
+    </view>  
+    <view class="item" bindtap="showPrevice">
+        <picker value="{{previceIndex}}" range="{{previceArray}}" bindchange="showPrevice">
+            <view class="area-select">{{previceArray[previceIndex]}}</view>
+            <!--<view class="area-select" wx:elif="{{previceArray == []}}">{{previce}}</view>-->
+        </picker>
+    </view>     
+    <view class="item" bindtap="showCity">
+        <picker  bindchange="showCity" value="{{cityIndex}}" range="{{cityArray}}">
+            <view class="area-select">{{cityArray[cityIndex]}}</view>
+            <!--<view class="area-select" wx:elif="{{cityArray == []}}">{{city}}</view>-->
+        </picker>
+    </view>  
+    <view class="item" bindtap="showCountry">
+        <picker  bindchange="showCountry" value="{{countryIndex}}" range="{{countryArray}}">
+            <view class="area-select">{{countryArray[countryIndex]}}</view>
+            <!--<view class="area-select" wx:elif="{{countryArray == []}}">{{country}}</view>-->
+        </picker>
+    </view>  
+    <view class="item">
+        <input name="detailAddr" placeholder="详细地址" value=""/>
+    </view>  
+    <view class="item">
+        <input name="postcode" placeholder="邮编" value=""/>
+    </view>  
+    <button class="save" type="primary" form-type="submit">保存</button>
+</form>

@@ -1,0 +1,57 @@
+<view class="search-area">
+    <form bindsubmit="search">
+        <input class="search-txt" name="keyword" placeholder="{{inputKeyword}}" bindinput="bindKeywordInput"/>
+        <navigator  wx:if="{{inputKeyword != ''}}" url="../searchResult/searchResult?keyword={{inputKeyword}}" hover-class="none">
+            <button class="search-btn" formType="submit" hover-class="none">搜索</button>
+        </navigator>
+        <button class="search-btn" formType="submit" hover-class="none"   wx:if="{{inputKeyword == ''}}">搜索</button>
+    </form>
+</view>
+<view class="search-hot">
+    <text class="hot-title">热搜</text>
+    <view class="hot-keyword-list">
+        <block wx:for="{{hotKeywordList}}" wx:key="hotKeyword">
+            <navigator url="../searchResult/searchResult?keyword={{item.Name}}" hover-class="none"  class="hot-keyword">
+                <view>
+                    <text>{{item.Name}}</text>
+                </view>
+            </navigator>
+        </block>
+    </view>
+</view>
+
+<block wx:if="{{inputKeyword != ''}}">
+    <block wx:if="tipKeywordList != null">
+        <view class="search-recommend">
+            <block wx:for="{{tipKeyword}}" wx:key="tipKeyword">
+                <navigator url="../searchResult/searchResult?keyword={{item.Keyword}}" hover-class="none"  class="tip-keyword hot-keyword">
+                    <view class="tipItem">
+                        <text class="tipshoppingName">{{item.Keyword}}</text>
+                        <text class="tipShoppingCount">约{{item.ItemCount}}条结果</text>
+                    </view>
+                </navigator>
+            </block>
+        </view>
+    </block>
+</block>
+
+
+<block wx:if="{{hideHistory}}">
+    <block wx:if="{{historyKeyword.length>0}}">
+        <view class="search-history search-hot" wx:if="{{inputKeyword != ''}}">
+            <text class="history-title hot-title">历史搜索</text>
+            <view class="hot-keyword-list">
+                <block wx:for="{{historyKeyword}}" wx:key="historyKeyword">
+                    <navigator url="../searchResult/searchResult?keyword={{item}}" hover-class="none"  class="hot-keyword">
+                        <view>
+                            <text>{{item}}</text>
+                        </view>
+                    </navigator>
+                </block>
+            </view>
+            <view class="clearStorage" bindtap="clearSearchstorage">
+                <text>清除历史搜索</text>
+            </view>
+        </view>
+    </block>
+</block>

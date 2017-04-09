@@ -1,0 +1,13 @@
+<view class="scrollList">
+    <scroll-view class="shoppingList" scroll-y="true">
+        <block wx:for="{{shoppingListItems}}" wx:key="shppping-list">
+            <view class="shoppingItem">
+                <navigator url="../prodetail/prodetail?productID={{item.ProductID}}"  hover-class="none">
+                    <image src="{{item.ImageUrl}}" class="shoppingImg" mode="aspectFill"></image>
+                    <text class="shoppingDesc">{{item.ProductName}}</text>
+                    <text class="shoppingPrice">￥{{item.Price}}</text>
+                </navigator>
+            </view>
+        </block>
+    </scroll-view>
+</view>
